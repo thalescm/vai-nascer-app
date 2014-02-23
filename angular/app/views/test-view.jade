@@ -1,0 +1,49 @@
+script
+  function drawMan(){
+    var w = 25;
+    var h = 50;
+    var canvas = document.getElementById('myCanvas');
+    if(canvas.getContext){
+      context = canvas.getContext("2d");
+      with(canvas){
+        setAttribute("width", w)
+        setAttribute("height", h)
+      }
+      with(context){
+        strokeStyle = "#000000";
+        lineWidth = "2";
+
+        /* Draw head */
+        arc(w/2, 3*h/16, h/16, 0, Math.PI*2, true);
+
+        /* Draw body */
+        moveTo(w/2,  4*h/16);
+        lineTo(w/2, 9*h/16);
+
+        /*Draw left arm */
+        moveTo((w/2), 5*h/16);
+        lineTo((w/2)-(3*h/16) , 8*h/16);
+
+        /*Draw left arm */
+        moveTo((w/2), 5*h/16);
+        lineTo((w/2)+(3*h/16) , 8*h/16);
+
+        /* Draw left leg */
+        moveTo(w/2, 9*h/16);
+        lineTo(w/2-(2.5*h/16), 14*h/16);
+
+        /* Draw right leg */
+        moveTo(w/2 , 9*h/16);
+        lineTo(w/2+(2.5*h/16), 14*h/16);
+        stroke();
+        fill();
+      }
+    }
+  }
+  window.onresize = function() {
+  drawMan();
+  }
+
+canvas#myCanvas
+script
+  drawMan();

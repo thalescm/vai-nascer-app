@@ -1,0 +1,17 @@
+//build:js({.tmp,app}) scripts/modules.js
+{{#each common.js.module}}
+script(src='{{this}}')
+{{/each}}
+//endbuild
+
+//build:js({.tmp,app}) scripts/application.js
+{{#each common.js.app}}
+script(src='{{this}}')
+{{/each}}
+//endbuild
+
+//build:js({.tmp,app}) scripts/modules_afterload.js
+{{#each common.js.module_afterload}}
+script(src='{{this}}')
+{{/each}}
+//endbuild

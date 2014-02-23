@@ -1,0 +1,51 @@
+{
+  "title": "Vai Nascer",
+  "name": "index",
+  "css": {
+    "main": [
+      "styles/main.css"
+    ]
+  },
+  "js": {
+    "module": [
+      "bower_components/angular-unstable/angular.min.js",
+      "bower_components/iscroll/build/iscroll.js",
+      "bower_components/ua-parser-js/src/ua-parser.js",
+      "bower_components/angular-sanitize/angular-sanitize.js",
+      "bower_components/underscore/underscore.js",
+      "bower_components/hammerjs/hammer.js",
+      "bower_components/angular-hammer/angular-hammer.js",
+      "bower_components/angular-ui-router/release/angular-ui-router.min.js"
+    ],
+    "module_afterload": [
+      "bower_components/angular-recaptcha/release/angular-recaptcha.js"
+    ],
+    "app": [
+      "scripts/app.js",
+      "scripts/templates.js",
+      "scripts/directives/directives.js",
+      "scripts/controllers/error/404.js",
+      "scripts/routers/error.js"
+    ],
+    "http": [
+      "scripts/routers/home.js",
+      "scripts/controllers/main.js"
+    ],
+    "custom": {
+      "web": {
+        "http": [
+          "bower_components/cookies.js/src/cookies.min.js",
+          "scripts/routers/custom/root_web_http.js",
+          "scripts/services/web/navigate.js"
+        ]
+      },
+      "cordova": [
+        "scripts/routers/custom/root_cordova.js",
+        "scripts/services/cordova/angular-native-mediator-event-queue.js",
+        "scripts/services/cordova/angular-native-mediator-event-executor.js",
+        "scripts/services/cordova/angular-native-mediator.js",
+        "scripts/services/cordova/navigate.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+page(name="error-404",
+ title="Busca",
+ left-action="openLeftMenu()",
+ right-action="openCart()",
+ right-icon="cart",
+ error="error",
+ header-busca='false')
+
+  .error-not-found.default-padding
+    h1 Desculpe-nos.
+      br
+      | Não encontramos sua página.
+
+    search-bar(sb-placehold="O que está procurando?", sb-location="false", sb-action="headerBuscaSubmit", sb-query="sbQuery")
+
+    br
+    .box-gray.no-bottom-border
+      p.font-terciary Ou se preferir, navegue pelos nossos departamentos
+      br
+      .button.fill-parent.terciary(ui-sref="departamentos")
+        | Explorar departamentos

@@ -1,0 +1,39 @@
+!!! 5
+html.no-js
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    //- Handlebars is used to compile the templates, so it must be escaped as angular has a conflict in syntax also using {{}}
+    title
+        = settings.company
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0')
+    meta(name="format-detection", content="telephone=no")    
+        
+    {{> common_css}}
+
+    {{> common_css_http}}
+    {{> common_css_https}}
+
+
+  body(ng-controller='AppCtrl', style="position: absolute; width: 100%;")
+
+    {{> common_body}}
+
+    script(src='http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true')
+
+    //- https://groups.google.com/forum/#!topic/recaptcha/tnosY9BulRs
+    //- script(src='https://www.google.com/recaptcha/api/js/recaptcha_ajax.js')
+    script(src='scripts/vendor/android/recaptcha_ajax.js')
+
+    {{> common_js}}
+
+    script(src='scripts/vendor/android/cordova.js')
+    script(src='scripts/vendor/android/cordova_plugins.js')
+
+    {{body}}
+
+    {{> common_js_http}}
+    {{> common_js_https}}
+
+    {{> custom_js common.js.custom.cordova}}

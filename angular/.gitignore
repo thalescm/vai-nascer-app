@@ -1,0 +1,11 @@
+# Grunt temporary files
+dist/
+www/
+.tmp/
+bower_components/
+
+# NPM packages folder.
+node_modules/
+
+# .NET app specific
+grunt-output.txt

@@ -1,0 +1,5 @@
+//build:css({.tmp,app}) styles/main.css
+{{#each common.css.main}}
+link(rel='stylesheet', href='{{this}}')
+{{/each}}
+//endbuild

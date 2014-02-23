@@ -1,0 +1,22 @@
+{
+  "name": "angularCoffeeApp",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular-hammer": "https://github.com/felipesabino/angular-hammer.git#2a1a3b9a83f65fe5b3ed779655d7d7bb1ad783db",
+    "angular-unstable": "1.1.5",
+    "json3": "~3.2.4",
+    "es5-shim": "~2.0.8",
+    "angular-recaptcha": "~0.0.5",
+    "angular-resource": "~1.0.7",
+    "angular-sanitize": "~1.0.7",
+    "angular-ui-router": "0.2.0",
+    "underscore": "1.5.2",
+    "ua-parser-js": "0.6.2",
+    "cookies.js": "https://github.com/ScottHamper/Cookies.git#0.3.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.0.7",
+    "angular-scenario": "~1.0.7"
+  },
+  "directory": "app\\bower_components"
+}
