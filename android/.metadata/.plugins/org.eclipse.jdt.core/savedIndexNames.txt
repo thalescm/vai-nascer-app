@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+/Users/thalescantafaro/projects/Vai-nascer-app/android/.metadata/.plugins/org.eclipse.jdt.core
+2753760853.index
+870576393.index
+2171185403.index
+3734727535.index

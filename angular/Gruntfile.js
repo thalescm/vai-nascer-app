@@ -122,6 +122,13 @@ module.exports = function (grunt) {
     // ---
     stylus: {
       build: {
+        options: {
+          // paths: ['<%= yeoman.src %>/styles'],
+          import: [
+            '<%= yeoman.cwd %>/<%= yeoman.src %>/styles/theme/theme',
+            // '<%= yeoman.cwd %>/<%= yeoman.src %>/styles/mixins/_mixins-imports',
+          ]
+        },
         files: [{
             expand: true,
             cwd: '<%= yeoman.src %>',
@@ -192,7 +199,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.src %>/assets',
           src: '{,*/}*.{png,jpg,jpeg}',
-          dest: '<%= yeoman.tmp %>/assets/images'
+          dest: '<%= yeoman.tmp %>/assets'
         }]
       }
     },

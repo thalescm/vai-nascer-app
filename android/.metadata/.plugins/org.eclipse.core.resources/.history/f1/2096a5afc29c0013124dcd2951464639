@@ -1,0 +1,35 @@
+package com.example.vainascerapp;
+
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import org.apache.cordova.Config;
+import org.apache.cordova.DroidGap;
+
+public class MainActivity extends DroidGap {
+
+
+	private String cordovaUrl;
+	
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+		// Gets Cordova base URL
+		this.cordovaUrl = Config.getStartUrl();
+		
+		Log.v("Main activity", cordovaUrl);
+        
+        super.loadUrl("../../angular/index.html", 3000);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+}
